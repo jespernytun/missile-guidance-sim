@@ -52,7 +52,7 @@ Therefore I had to drop down to a first order system, which made the P(ID) vs LQ
 
 ---
 
-**Choice of controller** \
+**Choice of Controller** \
 My project make me realize that for my first order system that the P(ID) and the LQR system is in a physical sense the exact same approach, just two different methods to calculate the feedback gain K. The method with pole placements let's me define the performance directly, whereas the LQR let's me find an optimal solution using a cost function. For a first order system like this, the pole placement method remains very simple to implement, whereas for a higher order system, this method might become harder to implement. An LQR will prove itself more useful for a v2 of this project taking forces into consideration. 
 
 ```mermaid
@@ -63,7 +63,7 @@ graph LR
     OUT --> K[K]
     K -->|feedback| S1
 ```
-**Key takeaway:** For higher order systems placing poles becomes less intuitive, and an LQR is easier to implement, even though the two systems physically gives us the same result.
+**Key Takeaway:** For higher order systems placing poles becomes less intuitive, and an LQR is easier to implement, even though the two systems physically gives us the same result.
 
 ---
 
