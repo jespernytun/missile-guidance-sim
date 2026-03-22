@@ -49,6 +49,7 @@ In my coursework, all exercices start by asking us to calculate the controlabili
 Therefore I had to drop down to a first order system, which made the P(ID) vs LQR comparaison less interesting. A later improvement to this project will be to make a full 6 order to make a more interestiing coparaison between the different controllers. This will be done in the future when I get a formal introduction to the LQR later in my cousework.
 
 **Key Takeaway:** Listen to your professor, do the test to see if your system is actually controllable before starting.
+
 ---
 
 **Choice of controller** \
