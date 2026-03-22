@@ -12,7 +12,7 @@ scipy.linalg solve_contininus_are
 ```
 
 ```console
-git clone https://github.com/jespernytun/missile-guidence-sim
+git clone https://github.com/jespernytun/missile-guidance-sim
 python3 -m venv venv
 pip install numpy
 pip install scipy
@@ -29,11 +29,11 @@ User is free to play around with tau, N and (Q,R) \
 -  (Q,R) represent the cost function for the LQR controller
 
 ## About the code
-This project is a 2D missile guidence simulator, made to make me understand the limits a proportional controller, and an introduction to the LQR and Proportional Navigation controllers. 
+This project is a 2D missile guidance simulator, made to make me understand the limits a proportional controller, and an introduction to the LQR and Proportional Navigation controllers. 
 
-The simulation displayed using pygame, and plots the real time position of the different missiles and the target, with a HUD with useful telemetry for eachh of the 3 missiles. The target is self is random — it spawns somwhere between ((200,600)(200,600)), with an undetermined speed and angle. 
+The simulation displayed using pygame, and plots the real time position of the different missiles and the target, with a HUD with useful telemetry for each of the 3 missiles. The target is self is random — it spawns somwehere between ((200,600)(200,600)), with an undetermined speed and angle. 
 
-After the simulation is finished, two plots will appear to compare the performance of the missiles. The first plot is the total accumulated effort. It is calculaed by adding up all the changes to theta. This variable is something you'd like to minimize, to optimalize performance.
+After the simulation is finished, two plots will appear to compare the performance of the missiles. The first plot is the total accumulated effort. It is calculaed by adding up all the changes to theta. This variable is something you'd like to minimize, to optimize performance.
 ```python
 effort.append(effort[-1] + abs(u*dt))
 ```
@@ -46,7 +46,7 @@ steering.append(u*dt)
 **Controlability** \
 In my coursework, all exercices start by asking us to calculate the controlability and observabiliy matrixes. In this project, after having calculated my state space representation, I skipped this part. What I didn't realize, even though in hindsight it makes intuetivly sense, is that I have no way of controlling my position directly. The error was noticed when I started coding, and the scipy.signal.place_poles function didn't work. After a long time debugging I found out I'd calculate my controlabillity matrix, where I realized my error.
 
-Therefore I had to drop down to a first order system, which made the P(ID) vs LQR comparaison less interesting. A later improvement to this project will be to make a full 6 order to make a more interestiing coparaison between the different controllers. This will be done in the future when I get a formal introduction to the LQR later in my cousework.
+Therefore I had to drop down to a first order system, which made the P(ID) vs LQR comparison less interesting. A later improvement to this project will be to make a full 6 order to make a more interestiing coparaison between the different controllers. This will be done in the future when I get a formal introduction to the LQR later in my cousework.
 
 **Key Takeaway:** Listen to your professor, do the test to see if your system is actually controllable before starting.
 
