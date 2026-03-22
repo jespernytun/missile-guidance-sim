@@ -41,6 +41,26 @@ The second graph is the momentary steering for each of the three rockets. A peak
 ```python
 steering.append(u*dt)
 ```
+## Limitations & Future Work
+- Kinematic model only — no forces or aerodynamics
+- First order system limits meaningful P vs LQR comparison
+- Future: 6-state dynamic model with thrust and moment of inertia
+- Future: 3D extension
+- 
+## Results
+
+### Simulation
+![Simulation screenshot](results/missile.gif)
+
+### Accumulated effort
+![Effort plot](results/effort.png)
+
+### Momentary steering
+![Steering plot](results/steering.png)
+
+A lower accumulated effort indicates a more efficient guidance law. 
+In this simulation PN demonstrates the most direct intercept trajectory,
+while P and LQR show similar effort profiles with different convergence behaviors.
 
 ## What I have learned
 **Controlability** \
