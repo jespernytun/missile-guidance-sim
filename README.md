@@ -46,7 +46,7 @@ steering.append(u*dt)
 - First order system limits meaningful P vs LQR comparison
 - Future: 6-state dynamic model with thrust and moment of inertia
 - Future: 3D extension
-- 
+  
 ## Results
 
 ### Simulation
